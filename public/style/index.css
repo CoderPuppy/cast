@@ -1,0 +1,73 @@
+.tabs > .tab {
+  display: none;
+}
+.tabs > .tab.active {
+  display: block;
+}
+.tabs > ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  height: 27px;
+}
+.tabs > ul > li {
+  float: left;
+  background: #dcdcdc;
+  padding: 2px 4px;
+  margin: 4px;
+  font-size: 15px;
+  height: 1em;
+  cursor: pointer;
+}
+.tabs > ul > li > a {
+  text-decoration: none;
+  color: #000;
+}
+.tabs > ul > li:hover {
+  background: #f0ff7a;
+}
+.tabs > ul > li.active {
+  background: #caff7a;
+}
+.tabs > ul::after {
+  clear: both;
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.spell-editor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  overflow: visible;
+}
+.spell-editor .resize-handle {
+  width: 4px;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  bottom: 0;
+  background-color: #000;
+  cursor: ew-resize;
+}
+.spell-editor .code,
+.spell-editor .help {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 27px;
+}
+.spell-editor ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+}
+body {
+  background-color: #f0ea9e;
+}

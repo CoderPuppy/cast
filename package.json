@@ -1,0 +1,27 @@
+{
+	"name": "cast",
+	"version": "0.1.0",
+	"author": "Drew Young",
+	"private": true,
+	"main": "./node",
+	"browserify": "./browser",
+	"dependencies": {
+		"connect": "~2.7.0",
+		"ecstatic": "~0.1.7",
+		"stylus": "~0.30.1",
+
+		"browserify": "~1.16.4",
+		"crdt": "~3.1.6",
+		"shoe": "~0.0.7",
+		"mux-demux": "~3.3.5",
+		"emit-stream": "~0.1.0",
+		"screen": "~0.2.10",
+		"local-store": "~0.2.0",
+		"node-uuid": "~1.4.0",
+
+		"buffer-browserify": "~0.0.4",
+		"reconnect": "~0.2.0",
+		"domready": "~0.2.11",
+		"client-reloader": "~1.0.2"
+	}
+}
