@@ -42,6 +42,7 @@
   bottom: 0;
   width: 300px;
   overflow: visible;
+  display: none;
 }
 .spell-editor .resize-handle {
   width: 4px;
@@ -67,6 +68,13 @@
   right: 0;
   bottom: 0;
   background-color: #000;
+}
+.resize-handle {
+  -webkit-selectable: none;
+  -moz-selectable: none;
+  -ms-selectable: none;
+  -o-selectable: none;
+  selectable: none;
 }
 body {
   background-color: #f0ea9e;

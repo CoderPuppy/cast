@@ -9,6 +9,8 @@ var Widget = (function() {
 
 		this.set(options);
 
+		el.show();
+
 		events.EventEmitter.call(this);
 	}
 	util.inherits(Widget, events.EventEmitter);
@@ -51,6 +53,12 @@ var Widget = (function() {
 				}
 
 				return this
+			};
+
+			this.destroy = function destroy() {
+				this.el.hide();
+
+				return this;
 			};
 
 			this.properties = {};

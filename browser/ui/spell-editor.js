@@ -5,19 +5,30 @@ var Tabs      = require('./tabs');
 var Editor    = require('./editor');
 var Resizable = require('./resizable');
 
-var editorOptions = {
-	theme: 'twilight',
-	mode: 'javascript'
-};
+var theme = 'textmate';
 
 var SpellEditor = (function() {
-	function SpellEditor(el, game, options) {
-		this.game = game;
+	function SpellEditor(el, spell, options) {
+		var self = this;
 
-		this.code = new Editor(el.find('.code'), editorOptions);
-		this.help = new Editor(el.find('.help'), editorOptions);
+		this.spell = spell;
 
-		this.resizable = new Resizable(el);
+		this.code = new Editor(el.find('.code'), {
+			theme: theme,
+			mode: 'javascript'
+		});
+		this.help = new Editor(el.find('.help'), {
+			theme: theme,
+			mode: 'javascript',
+			readOnly: true
+		});
+
+		this.resizable = new Resizable(el).on('resize', function() {
+			self.code.resize();
+			self.help.resize();
+		}).on('resize', function() {
+			self.emit('resize');
+		});
 
 		this.tabs = new Tabs(el);
 

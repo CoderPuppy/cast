@@ -7,6 +7,10 @@ var Player = (function() {
 		this.row = this.entity.row;
 		this.point = this.entity.abs;
 		this.game = this.entity.game;
+
+		this.row.on('update', function(changes) {
+			self.emit('update', changes);
+		});
 	}
 	util.inherits(Player, events.EventEmitter);
 

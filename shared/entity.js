@@ -27,7 +27,7 @@ var Entity = (function() {
 		}
 
 		this.row.on('update', function(changes) {
-			this.abs(changes);
+			self.abs(changes);
 			self.emit('update', changes);
 		});
 	}

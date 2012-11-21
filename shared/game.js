@@ -16,9 +16,13 @@ var Game = (function() {
 	function Game() {
 		if(!(this instanceof Game)) return new Game();
 
+		var self = this;
+
 		this.store = store('cast');
 
-		this.entitiesDoc = new crdt.Doc();
+		this.entitiesDoc = new crdt.Doc().on('create', function(row) {
+			self.entities[row.id] = new Entity(self, row);
+		});
 		this.wizardRows = this.entitiesDoc.createSet('type', 'wizard');
 		this.entities = {};
 

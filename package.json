@@ -20,11 +20,13 @@
 		"screen": "~0.2.10",
 		"local-store": "~0.2.0",
 		"node-uuid": "~1.4.0",
+		"eson": "~0.4.1",
 
 		"buffer-browserify": "~0.0.4",
 		"reconnect": "~0.2.0",
 		"domready": "~0.2.11",
-		"client-reloader": "~1.0.2"
+		"client-reloader": "~1.0.2",
+		"arrow-keys": "~1.0.0"
 	},
 	"scripts": {
 		"start": "node node/index.js"

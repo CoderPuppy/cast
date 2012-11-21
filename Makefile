@@ -1,5 +1,5 @@
 server:
-	nodemon node/index.js --watch shared --watch node --watch browser --watch browser/ui
+	nodemon node/index.js --watch shared --watch node --watch public
 
 build-script-dev:
 	forever -e browserify.log node_modules/browserify/bin/cmd.js browser/index.js -o public/application.js \

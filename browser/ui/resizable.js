@@ -46,6 +46,8 @@ var Resizable = (function() {
 						}
 						break;
 				}
+				
+				self.emit('resize');
 			}
 		});
 
@@ -55,7 +57,12 @@ var Resizable = (function() {
 
 	return (function() {
 		(function() {
-			
+			this.destroy = function destroy() {
+				this.handle.remove();
+				this.down = false;
+
+				return this;
+			};
 		}).call(this.prototype);
 
 		return this;
