@@ -1,4 +1,4 @@
-require.define('jquery', function(require,module,exports,__dirname,__filename,process,global) { module.exports = $; });
+window.$ = require('jquery');
 
 // Make sure everything is included in the bundle
 require('buffer-browserify');
